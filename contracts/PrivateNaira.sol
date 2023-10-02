@@ -7,7 +7,7 @@ import "./PERC20.sol";
  * @dev Sample implementation of the {PERC20} contract.
  */
 contract PERC20Sample is PERC20 {
-    constructor() PERC20("Sample PERC20", "pSWTR") {}
+    constructor() PERC20("Private Naira", "pNaira") {}
 
     /// @dev Wraps SWTR to PSWTR.
     receive() external payable {
@@ -21,7 +21,7 @@ contract PERC20Sample is PERC20 {
         // This function should be called by EOA using signed `eth_call` to make EVM able to
         // extract original sender of this request. In case of regular (non-signed) `eth_call`
         // msg.sender will be empty address (0x0000000000000000000000000000000000000000).
-        require(msg.sender == account, "PERC20Sample: msg.sender != account");
+        require(msg.sender == account, "pNaira: caller is not owner");
 
         // If msg.sender is correct we return the balance
         return _balances[account];
@@ -34,7 +34,7 @@ contract PERC20Sample is PERC20 {
         // This function should be called by EOA using signed `eth_call` to make EVM able to
         // extract original sender of this request. In case of regular (non-signed) `eth_call`
         // msg.sender will be empty address (0x0000000000000000000000000000000000000000)
-        require(msg.sender == spender, "PNaira: caller is not owner");
+        require(msg.sender == spender, "pNaira: caller is not owner");
         
         // If msg.sender is correct we return the allowance
         return _allowances[owner][spender];
