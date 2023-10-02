@@ -3,9 +3,7 @@ pragma solidity ^0.8.17;
 
 import "./PERC20.sol";
 
-/**
- * @dev Sample implementation of the {PERC20} contract.
- */
+
 contract PERC20Sample is PERC20 {
     constructor() PERC20("Private Naira", "pNaira") {}
 
