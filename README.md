@@ -1,8 +1,6 @@
-# Sample Hardhat Project
+# Private-Naira (pERC20) Token
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
+* TOKEN CONTRACT ADDRESS: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 
 ```shell
 npx hardhat help

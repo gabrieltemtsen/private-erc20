@@ -4,7 +4,7 @@ pragma solidity ^0.8.17;
 import "./PERC20.sol";
 
 
-contract PERC20Sample is PERC20 {
+contract PrivateNaira is PERC20 {
     constructor() PERC20("Private Naira", "pNaira") {}
 
     /// @dev Wraps SWTR to PSWTR.
